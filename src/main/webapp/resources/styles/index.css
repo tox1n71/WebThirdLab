@@ -1,0 +1,187 @@
+
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: url(#{resource['images/drive.jpg']});
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    height: calc(100% - 1px);
+}
+
+form {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+a:link {
+    color: #00ffe9;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #e289ff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f616d8;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #9e78ff;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.margin {
+    margin: 2px;
+}
+
+.round-container {
+    border: solid 2px black;
+    border-radius: 4px;
+}
+
+
+.blured-container {
+    width: 130%;
+    color: #F0EEEB;
+    background-color: rgba(77, 77, 77, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.fit-content-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    width: 100%;
+    padding: 5px;
+    box-shadow: 0 -20px 100px black;
+    overflow: auto;
+    font-family: "Bree Serif", serif;
+    color: #ffffff;
+    font-size: 18px;
+    height: fit-content; /* автоматический размер для хедера */
+    background-color: rgba(77, 77, 77, 0.5);
+
+    /* Применяем размытие к хедеру */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+
+
+#result-table-container {
+    padding: 2px;
+    width: fit-content;
+    height: fit-content;
+}
+.wrapper{
+    height: 100px;
+    width: 360px;
+    /*position: relative;*/
+    /*background: linear-gradient(135deg, #14ffe9, #ff00e0);*/
+    border-radius: 10px;
+    cursor: default;
+    justify-content: center; /* Выравнивание по горизонтали по центру */
+    align-items: center; /* Выравнивание по вертикали по центру */
+    /*animation: animate 1.5s linear infinite;*/
+    display: block;
+    margin-left: 500px;
+    margin-right: auto;
+}
+.wrapper .display,
+.wrapper span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.wrapper .display{
+
+    z-index: 999;
+    height: 85px;
+    width: 345px;
+    /*background: #1b1b1b;*/
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+#time{
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 600;
+    width: 475px;
+    background: -webkit-linear-gradient(140deg, #c56ef4, #d627ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*animation: animate 15.5s linear infinite;*/
+}
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.wrapper span{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: inherit;
+}
+.wrapper span:first-child{
+    filter: blur(7px);
+}
+.wrapper span:last-child{
+    filter: blur(20px);
+}
+
+.drive-button{
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    /*background-color: transparent;*/
+    background: -webkit-linear-gradient(140deg, #c56ef4, #278aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.drive-button:hover{
+    background: -webkit-linear-gradient(140deg, #278aed, #c56ef4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#redirect-container{
+    height: auto;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
